@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Type
+   ========================================================================== */
+
+h1, .h1 {
+	@include vertical-rhythm($font-size-xl);
+}
+
+h2, .h2 {
+	@include vertical-rhythm($font-size-l);
+}
+
+h3, .h3 {
+	@include vertical-rhythm($font-size-m);
+}
+
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p,
+code,
+dl,
+ol,
+ul {
+	@include vertical-rhythm;
+}
+
+ol {
+	padding-left: 1.375em;
+}
+
+ul {
+	padding-left: 1.0625em;
+}
+
+small {
+	@include vertical-rhythm($font-size-xs);
+
+	display: block;
+}
+
+blockquote {
+	@include vertical-rhythm($font-size-m);
+}
+
+a {
+	color: $branding-2;
+	font-weight: bold;
+	text-decoration: none;
+
+	&:hover,
+	&.active {
+		color: $branding-1;
+	}
+}
+
+code {
+	padding: .25em .5em;
+	border-radius: $radius-m;
+	background: $gray-lightest;
+	font-weight: normal;
+	line-height: 1.375;
+}
+
+b,
+.bold {
+	font-weight: bold;
+}
+
+em,
+.emphasis {
+	font-style: italic;
+}
+
+.centered {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.underlined {
+	text-decoration: underline;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.u-line-through {
+	text-decoration: line-through;
+}
+
+
+/* Lists
+   ========================================================================== */
+
+ul,
+ol {
+	padding-left: 1.3em;
+}
+
+.unstyled {
+	margin: 0;
+	padding-right: 0;
+	padding-left: 0;
+
+	list-style: none;
+}

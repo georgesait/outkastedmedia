@@ -1,0 +1,78 @@
+/* H5BP Helper classes
+   ========================================================================== */
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+.visuallyhidden {
+	@include visuallyhidden();
+
+	// Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p
+	&.focusable:active,
+	&.focusable:focus {
+		clip: auto;
+		height: auto;
+		margin: 0;
+		overflow: visible;
+		position: static;
+		width: auto;
+	}
+}
+
+
+// Hide visually and from screenreaders, but maintain layout
+.invisible {
+	visibility: hidden;
+}
+
+// Hide elements with this class when JavaScript is enabled
+.js-hidden {
+	.js & {
+		display: none;
+	}
+}
+
+/* SMACCS State: always start your state class with '.is-''
+   ========================================================================== */
+
+.is-hidden {
+	@extend .visuallyhidden;
+}
+
+.is-collapsed {
+	overflow: hidden;
+	max-height: 0;
+}
+
+.is-expanded {
+	max-height: 9999em;
+}
+
+.is-valid,
+.is-error,
+.is-invalid {
+	color: green;
+	border: solid 1px green;
+}
+
+.is-error,
+.is-invalid {
+	color: red;
+	border-color: red;
+}
+
+.is-positive {
+	color: $positive !important;
+}
+
+.is-negative {
+	color: $negative !important;
+}
+
+.is-active {
+	color: $branding-1;
+}

@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+// This makes sure windows tablets etc. do not scale down, but behave responsively
+// http://mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html#update-20131015
+@-ms-viewport {
+	width: device-width;
+}
+
+
+/* Container
+   ========================================================================== */
+
+.container {
+	max-width: $container-max-width;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: $distance-s $grid-gutter/2;
+
+	@include respond-to(small) {
+		padding-left: $grid-gutter;
+		padding-right:  $grid-gutter;
+	}
+}
+
+
+/* Main
+   ========================================================================== */
+
+.main {
+	@include clearfix;
+}

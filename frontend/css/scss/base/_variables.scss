@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Variables - Main Config for all SCSS
+   ========================================================================== */
+
+
+/* Grid & layout
+   ========================================================================== */
+$grid-gutter: 					12px;
+$grid-push:						true;
+$grid-pull:						true;
+$grid-offset:					true;
+$em-base: 						14px;
+$breakpoints: 					(mobile: 0, tiny: 30em, small: 48em, medium: 60em, large: 71.25em); // 0, 480px, 768px, 960px, 1140px
+
+$gutter: 						$grid-gutter/2;
+$container-max-width:			70em; // 1120px: base font-size = 14px;
+
+
+/* Type, based on Vertical Rhythm
+   ========================================================================== */
+
+$fontstack-lato:				'Lato', Helvetica, Arial, Sans-Serif;
+$body-font:						$fontstack-lato;
+
+// Base
+// Golden Ratio Typography Calculator: http://www.pearsonified.com/typography
+$px-font-size:					18; // F.e. 16
+$px-line-height:				28; // F.e. 24
+
+$base-font-size:				($px-font-size / 16) * 1rem;
+$base-line-height:				($px-line-height / $px-font-size);
+
+$rhythm:						($base-font-size * $base-line-height);
+$rhythm-offset:					0.75; // Unitless value relative to 1em.
+
+// Cap height
+// This value may vary for each font and base setting. Unitless value relative to 1em.
+$cap-height:					0.0125; // F.e. 0.02
+
+// Headers and paragraphs
+// The leaders and trailers are calculated in rhythm rows.
+$header-leader:					1;
+$header-trailer:				0;
+
+$paragraph-leader:				0;
+$paragraph-trailer:				1;
+
+// Modular scale
+$modular-scale:					"golden section"; // See "functions/calc-font-sizes" for all preset scales
+$font-sizes: 					(xs, s, m, l, xl, xxl);
+$font-size-default:				s;
+
+// Font sizes
+$font-sizes: 					calc-font-sizes($modular-scale, $font-sizes, $font-size-default);
+
+$font-size-xs:					map-get($font-sizes, xs);
+$font-size-s:					map-get($font-sizes, s);
+$font-size-m:					map-get($font-sizes, m);
+$font-size-l:					map-get($font-sizes, l);
+$font-size-xl:					map-get($font-sizes, xl);
+$font-size-xxl:					map-get($font-sizes, xxl);
+
+$font-weight-light:				300;
+$font-weight-normal:			400;
+
+
+/* Colours
+   ========================================================================== */
+
+// Base
+$black:							#393939;
+$gray:							#ccc;
+$white:							#fff;
+
+$negative:						#FF0000;
+$negative-lighter:				lighten($negative, 20%);
+$negative-lightest:				lighten($negative, 50%);
+$negative-darker:				darken($negative, 25%);
+$negative-darkest:				darken($negative, 50%);
+
+$positive:						#008000;
+$positive-lighter:				lighten($positive, 20%);
+$positive-lightest:				lighten($positive, 50%);
+$positive-darker:				darken($positive, 25%);
+$positive-darkest:				darken($positive, 50%);
+
+// Branding
+$branding-1:	 				#FB4752;
+$branding-2: 					tomato;
+
+$branding-1-lightest:			lighten($branding-1, 30%);
+$branding-1-lighter:			lighten($branding-1, 17.5%);
+$branding-1-darker:				darken($branding-1, 15%);
+
+$branding-2-lightest:			lighten($branding-2, 75%);
+$branding-2-lighter:			lighten($branding-2, 55%);
+$branding-2-darker:				darken($branding-2, 100%);
+
+// Blacks
+$black-lightest:				lighten($black, 8%);
+$black-lighter:					lighten($black, 4%);
+$black-darker:					darken($black, 4%);
+$black-darkest:					darken($black, 8%);
+
+// Grays
+$gray-lightest:					lighten($gray, 16.5%);
+$gray-lighter:					lighten($gray, 7.5%);
+$gray-darker:					darken($gray, 7.5%);
+$gray-darkest:					darken($gray, 20%);
+
+
+/* Borders
+   ========================================================================== */
+$border-s:						1px solid;
+$border-m:						2px solid;
+$border-l:						4px solid;
+
+$radius-s:						2px;
+$radius-m:						$radius-s * 2;
+$radius-l:						$radius-s * 3;
+$radius-full:					100%;
+
+
+/* Alignment, based on Vertical Rhytm
+   ========================================================================== */
+$distance-xs:					$rhythm * 0.5;
+$distance-s:					$rhythm * 1;
+$distance-m:					$rhythm * 2;
+$distance-l:					$rhythm * 4;
+$distance-xl:					$rhythm * 8;
+
+$size-xs:						$rhythm * 0.5;
+$size-s:						$rhythm * 1;
+$size-m:						$rhythm * 2;
+$size-l:						$rhythm * 4;
+$size-xl:						$rhythm * 8;
